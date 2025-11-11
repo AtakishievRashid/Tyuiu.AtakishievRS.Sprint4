@@ -8,16 +8,18 @@ namespace Tyuiu.AtakishievRS.Sprint4.Task3.V3.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            int[,] array = new int[5, 5]
-            {
-                {1,2,3,4,5 },
-                {5,4,3,2,1 },
-                {7,8,9,6,5 },
-                {0,0,0,0,0 },
-                {1,2,3,4,5 }
-            };
-            int result = ds.Calculate(array);
-            Assert.AreEqual(9, result);
+
+            int[,] testArray = {
+            {9, 4, 5, 4, 8},
+            {7, 6, 7, 7, 4},
+            {4, 4, 3, 5, 6},
+            {6, 5, 9, 4, 9},
+            {9, 7, 8, 7, 7}
+        };
+
+            int result = ds.Calculate(testArray);
+
+            Assert.AreEqual(14, result);
 
         }
     }

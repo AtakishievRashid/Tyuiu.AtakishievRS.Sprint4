@@ -5,12 +5,22 @@ namespace Tyuiu.AtakishievRS.Sprint4.Task3.V3.Lib
     {
         public int Calculate(int[,] array)
         {
-            int max = 0;
-            for (int i = 0; i < array.GetLength(0); i++)
+            int count = 0;
+            int rows = array.GetLength(0);
+            int cols = array.GetLength(1);
+
+            for (int i = 0; i < rows; i++)
             {
-                max = Math.Max(max, array[2, i]);
+                for (int j = 0; j < cols; j++)
+                {
+                    if (array[i, j] % 2 != 0)
+                    {
+                        count++;
+                    }
+                }
             }
-            return max;
+
+            return count;
         }
     }
 }
