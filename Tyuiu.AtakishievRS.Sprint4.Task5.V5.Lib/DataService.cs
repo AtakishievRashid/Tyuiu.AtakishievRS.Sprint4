@@ -5,8 +5,8 @@ namespace Tyuiu.AtakishievRS.Sprint4.Task5.V5.Lib
     {
         public int Calculate(int[,] matrix)
         {
-            int RowsOfArray = matrix.GetUpperBound(0) + 1;
-            int ColumnsOfArray = matrix.GetUpperBound(1) + 1;
+            int RowsOfArray = matrix.GetLength(0);
+            int ColumnsOfArray = matrix.GetLength(1);
             int Result = 0;
 
             for (int i = 0; i < RowsOfArray; i++)
